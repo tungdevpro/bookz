@@ -12,8 +12,8 @@ type Server struct{}
 
 func (s *Server) Create() {
 
-	db := db.MongoDatabase{}
-	db.DBConnection()
+	db := &db.MongoDatabase{}
+	db.Client = db.DBConnection()
 
 	r := gin.Default()
 

@@ -29,9 +29,5 @@ func (m *MongoDatabase) DBConnection() *mongo.Client {
 		log.Fatal("Connection Failed to Mongo Database")
 		log.Fatal(err)
 	}
-
-	cl := MongoDatabase{}
-	cl.Client = client
-
-	return cl.Client
+	return client
 }
